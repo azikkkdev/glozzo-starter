@@ -1,0 +1,44 @@
+
+<html>
+<head><title>Тест из нескольких задач по математике</title>
+<style>
+p {
+	font-size:24px;
+}
+input {
+	font-size:24px;
+}
+</style>
+</head>
+<body style="background-color:#e1e9e131;">
+<p>Выполните задания теста:</p>
+<p>4*12 + 7 = <input type="text" id="z_1"></p>
+<p>7-8*2 = <input type="text" id="z_2"></p>
+<p>34*2 + 17 =  <input type="text" id="z_3"></p>
+<button onClick="proverit();">Проверить</button>
+<div id="rezultat"></div>
+<script>
+function proverit(){
+pr_otv_zadachi_1 = 55; 
+pr_otv_zadachi_2 = -9;
+pr_otv_zadachi_3 = 85;
+otv_uch_1 = document.getElementById('z_1').value;
+otv_uch_2 = document.getElementById('z_2').value;
+otv_uch_3 = document.getElementById('z_3').value;
+ball = 0;
+if(otv_uch_1 == pr_otv_zadachi_1){
+ball +=1;
+}
+if(otv_uch_2 == pr_otv_zadachi_2){
+ball +=1;
+}
+if(otv_uch_3 == pr_otv_zadachi_3){
+ball +=1;
+}
+vsego_zadach = 3;
+procent_vip = ball/vsego_zadach * 100;
+document.getElementById('rezultat').innerHTML = "Задания выполнены верно на "+procent_vip+"%.";
+}
+</script>
+</body>
+</html>
